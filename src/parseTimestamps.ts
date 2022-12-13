@@ -15,7 +15,7 @@ export function parseTimestamps(value: string): Timestamp {
   }
 
   if (match[3]) {
-    timestamp.settings = match[3]
+    timestamp.settings = match[3].trim()
   }
 
   return timestamp

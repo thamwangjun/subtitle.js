@@ -37,7 +37,7 @@ export class Parser {
   }
 
   private isVttComment(line: string): boolean {
-    return /^NOTE/.test(line)
+    return /NOTE\s*.*/.test(line)
   }
 
   private getError(expected: string, index: number, row: string): Error {
@@ -47,7 +47,8 @@ export class Parser {
   }
 
   public parseLine(line: string): void {
-    const contents = this.state.row === 0 ? stripBom(line) : line
+    const contents_raw = this.state.row === 0 ? stripBom(line) : line
+    const contents = contents_raw.replace(/^(\s)+/, '')
 
     if (!this.state.hasContentStarted) {
       if (contents.trim()) {
@@ -97,6 +98,7 @@ export class Parser {
   }
 
   private parseId(line: string) {
+    if (line === '') return
     this.state.expect = 'timestamp'
 
     if (this.state.node.type === 'header') {

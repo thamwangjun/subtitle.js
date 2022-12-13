@@ -1,0 +1,15 @@
+[
+    {
+        "type": "header",
+        "data": "WEBVTT"
+    },
+    {
+        "type": "cue",
+        "data": {
+            "start": 0,
+            "end": 1000,
+            "settings": "position:60.00%,middle  align:middle size:90.00%  line:81.23%",
+            "text": "hello, whitespace!"
+        }
+    }
+]

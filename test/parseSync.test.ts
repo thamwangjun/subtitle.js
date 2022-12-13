@@ -264,8 +264,7 @@ Hi.`
         "data": Object {
           "end": 100,
           "start": 0,
-          "text": "Something something something... dark side
-     ",
+          "text": "Something something something... dark side",
         },
         "type": "cue",
       },

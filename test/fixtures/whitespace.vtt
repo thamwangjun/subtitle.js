@@ -1,0 +1,18 @@
+WEBVTT
+
+NOTE Joe Doe
+NOTE Profile: webvtt-lssdh-ios8
+NOTE Date: 2016/02/31 12:12:12
+
+NOTE SegmentIndex
+NOTE Segment=123.456 12345@123 123
+NOTE Segment=234.567 23456@34567 234
+NOTE Segment=345.678 45678@56789 345
+NOTE /SegmentIndex
+
+                          
+
+                    
+1
+00:00:00.000 --> 00:00:01.000  position:60.00%,middle  align:middle size:90.00%  line:81.23% 
+hello, whitespace!

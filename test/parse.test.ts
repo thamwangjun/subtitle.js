@@ -19,6 +19,16 @@ test.each(utils.fixtures)('parse VTT fixture: %s', async fixture => {
   expect(buffer).toEqual(expected)
 })
 
+test('parse VTT fixture - whitespace.vtt', async () => {
+  const fixture = 'whitespace'
+  const buffer = await utils.pipeline(
+    utils.getFixtureStream(fixture, 'vtt').pipe(parse())
+  )
+  const expected = JSON.parse(await utils.getFixture(fixture, 'vtt.json'))
+
+  expect(buffer).toEqual(expected)
+})
+
 test('error handling', done => {
   const stream = utils.createStreamFromString(`
 1
